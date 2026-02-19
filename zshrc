@@ -36,6 +36,8 @@ if [[ $(uname) == "Darwin" ]]; then
         ln -sf ~/.dotfiles/.gitignore ~/.gitignore
         ln -sf ~/.dotfiles/zshrc ~/.zshrc
         touch ~/.hushlogin
+        defaults -currentHost write -globalDomain NSStatusItemSpacing -int 8
+        defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
     fi
     if [[ ! -d ~/.config/hammerspoon ]]; then
         defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
