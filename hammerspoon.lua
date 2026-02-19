@@ -4,10 +4,10 @@ if f ~= nil then io.close(f) else
   hs.alert("Downloading Spoons")
   os.execute([[
     mkdir -p Spoons && cd Spoons &&
-    git clone https://github.com/jasonrudolph/ControlEscape.spoon.git
-    git clone https://github.com/forkde4x/Rectangle.spoon.git
-    git clone https://github.com/forkde4x/Rcmd.spoon.git
-    git clone https://github.com/forkde4x/KeyMapper.spoon.git
+    git clone https://github.com/jasonrudolph/ControlEscape.spoon.git &&
+    git clone https://github.com/forkde4x/Rectangle.spoon.git &&
+    git clone https://github.com/forkde4x/Rcmd.spoon.git &&
+    git clone https://github.com/forkde4x/KeyMapper.spoon.git &&
     curl -LO https://github.com/Hammerspoon/Spoons/raw/master/Spoons/EmmyLua.spoon.zip &&
     unzip ~/.config/hammerspoon/Spoons/EmmyLua.spoon.zip &&
     rm ~/.config/hammerspoon/Spoons/EmmyLua.spoon.zip && cd -
@@ -21,9 +21,8 @@ hs.loadSpoon("ControlEscape")
 spoon.ControlEscape:start()
 
 -- Move and resize windows
-hs.window.animationDuration = 0.1
-local mods = { "ctrl", "cmd" }
 hs.loadSpoon("Rectangle")
+local mods = { "ctrl", "cmd" }
 spoon.Rectangle:bindHotkeys({
   top_left    = { mods, "q" },  top_half    = { mods, "w" },  top_right    = { mods, "e" },
   left_half   = { mods, "a" },  center_half = { mods, "s" },  right_half   = { mods, "d" },
@@ -33,7 +32,7 @@ spoon.Rectangle:bindHotkeys({
   focus_left  = { mods, "h" },  focus_right = { mods, "l" },
   focus_up    = { mods, "k" },  focus_down  = { mods, "j" },  focus_under =  { mods, "i" },
 })
-spoon.Rectangle:config({ margins = 7 })
+spoon.Rectangle:config({ margins = 8 })
 
 -- Switch apps using the right command key
 hs.loadSpoon("Rcmd")
@@ -111,7 +110,6 @@ spoon.Rcmd:bindHotkeys({
       0.1)
     end
   end,
-  W = "aider-desk",
   x = "FileZilla",
   z = "Messages",
   ["`"] = "ChatGPT",
@@ -146,9 +144,6 @@ end
 for lhs, rhs in pairs(shiftmaps) do keymaps.default[lhs] = rhs end
 hs.loadSpoon("KeyMapper")
 spoon.KeyMapper:bindHotkeys(keymaps):start()
-
-hs.loadSpoon("AltClipboard")
-spoon.AltClipboard:start()
 
 -- Toggle macOS dark mode
 hs.hotkey.bind({ "ctrl", "cmd" }, "n", function()
