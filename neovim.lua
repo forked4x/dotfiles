@@ -571,10 +571,10 @@ require("lazy").setup({
           ["<C-l>"] = false,
           ["<C-p>"] = "actions.preview",
           ["<C-r>"] = "actions.refresh",
-          ["<D-c>"] = {
+          ["<D-c><D-c>"] = {
             function()
               vim.fn.setreg("+", require("oil").get_current_dir() .. require("oil").get_cursor_entry().name)
-            end, desc = "Copy full file path to clipboard",
+            end, mode = "n", desc = "Copy full file path to clipboard",
           },
           ["~"] = {
             function() require("oil").open(vim.fn.expand("~")) end,
