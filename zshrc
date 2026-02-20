@@ -108,4 +108,5 @@ fi
 
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
+zle_highlight+=(paste:none)
 zinit light MichaelAquilina/zsh-autoswitch-virtualenv
