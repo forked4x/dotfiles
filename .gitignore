@@ -2,3 +2,5 @@
 .git/
 .venv/
 *.key
+.claude/
+CLAUDE.md

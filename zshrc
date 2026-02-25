@@ -34,7 +34,6 @@ if [[ $(uname) == "Darwin" ]]; then
     if [[ ! -d ~/.dotfiles ]]; then
         git clone git@github.com:forked4x/dotfiles.git ~/.dotfiles
         git config --global core.excludesFile ~/.dotfiles/.gitignore
-        ln -sf ~/.dotfiles/.gitignore ~/.gitignore
         ln -sf ~/.dotfiles/zshrc ~/.zshrc
         touch ~/.hushlogin
         defaults -currentHost write -globalDomain NSStatusItemSpacing -int 8
@@ -74,6 +73,7 @@ elif [[ $(uname) == "Linux" ]]; then
             unset -f brew
             eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
             brew bundle --file=~/.Brewfile
+            git config --global core.excludesFile ~/.gitignore
             ln -sf /home/linuxbrew/.linuxbrew/bin/python3 /home/linuxbrew/.linuxbrew/bin/python
             ln -sf /home/linuxbrew/.linuxbrew/bin/pip3 /home/linuxbrew/.linuxbrew/bin/pip
             eval "$(zoxide init zsh)"
