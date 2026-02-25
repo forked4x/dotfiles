@@ -713,6 +713,10 @@ require("lazy").setup({
   { "fladson/vim-kitty", -- {{{ Can be removed in Neovim v0.12
     ft = "kitty",
   }, -- }}}
+  { "forked4x/hackernews.nvim",
+    enabled = vim.fn.has("mac") == 1,
+    cmd = "HackerNews",
+  },
 })
 
 --[[ Keymaps ]]-- {{{
