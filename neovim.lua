@@ -133,11 +133,15 @@ require("lazy").setup({
             vim.fn.chdir(item.cwd or item.file)
             vim.cmd("Neogit kind=replace cwd=" .. (item.cwd or item.file))
           end,
+          live_grep = function(_, item)
+            Snacks.picker.grep({ cwd = item.dir and item.file or item.cwd })
+          end,
         },
         win = {
           input = {
             keys = {
               ["<C-->"] = { "jump", mode = { "n", "i" } },
+              ["<C-/>"] = { "live_grep", mode = { "n", "i" } },
               ["<D-g>"] = { "open_neogit", mode = { "n", "i" } },
               ["<esc>"] = { "close", mode = { "n", "i" } },
             },
