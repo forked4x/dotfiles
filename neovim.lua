@@ -658,7 +658,7 @@ require("lazy").setup({
                 url = "https://openrouter.ai/api/v1/chat/completions",
                 env = { api_key = "cmd:cat ~/.dotfiles/openrouter_work.key" },
                 headers = { ["X-Title"] = "Neovim", ["HTTP-Referer"] = "https://neovim.io" },
-                schema = { model = { default = "openai/gpt-5.2-codex" } },
+                schema = { model = { default = "anthropic/claude-opus-4.6" } },
               })
             end
           }
