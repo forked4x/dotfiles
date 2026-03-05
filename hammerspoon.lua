@@ -110,7 +110,7 @@ spoon.Lazy:setup({
   },
 
   -- Prevents display sleep and keeps Microsoft Teams status as "Available"
-  { "forked4x/Caffeine.spoon" },
+  { "forked4x/Caffeine.spoon", start = false },
 
   -- Generates EmmyLua annotations for Hammerspoon
   { "Hammerspoon/Spoons/raw/master/Spoons/EmmyLua.spoon.zip" },
