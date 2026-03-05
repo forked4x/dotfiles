@@ -125,10 +125,10 @@ spoon.Lazy:setup({
     [{ "cmd", "e" }] = { "alt", "right",    { repeat_ = true, shift = true } },
     [{ "cmd", "d" }] = { "alt", "pagedown", { repeat_ = true, shift = true } },
     [{ "cmd", "u" }] = { "alt", "pageup",   { repeat_ = true, shift = true } },
-    [{ "alt", "h" }] = { "cmd", "left",     { shift = true } },
-    [{ "alt", "j" }] = { "cmd", "down",     { shift = true } },
-    [{ "alt", "k" }] = { "cmd", "up",       { shift = true } },
-    [{ "alt", "l" }] = { "cmd", "right",    { shift = true } },
+    [{ "alt,cmd", "h" }] = { "cmd", "left", { shift = true } },
+    [{ "alt,cmd", "j" }] = { "cmd", "down", { shift = true } },
+    [{ "alt,cmd", "k" }] = { "cmd", "up",   { shift = true } },
+    [{ "alt,cmd", "l" }] = { "cmd", "right",{ shift = true } },
 
     Things = {
       [{ "cmd", "return" }] = { "cmd",     "k", { noremap = true } },
