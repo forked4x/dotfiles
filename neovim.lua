@@ -575,6 +575,7 @@ require("lazy").setup({
           ["<C-l>"] = false,
           ["<C-p>"] = "actions.preview",
           ["<C-r>"] = "actions.refresh",
+          ["<D-c>"] = { "", mode = "o" }, -- Disable default cmd+c omap
           ["<D-c><D-c>"] = {
             function()
               vim.fn.setreg("+", require("oil").get_current_dir() .. require("oil").get_cursor_entry().name)
