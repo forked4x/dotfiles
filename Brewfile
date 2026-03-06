@@ -38,7 +38,6 @@ if OS.mac?
   cask "numi"
   cask "openvpn-connect"
   cask "plex-media-server"
-  cask "pritunl"
   cask "stats"
   cask "tableplus"
   cask "transmission"
