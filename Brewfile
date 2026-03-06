@@ -27,7 +27,6 @@ if OS.mac?
   cask "chromedriver"
   cask "claude"
   cask "claude-code"
-  cask "claudebar"
   cask "codex"
   cask "docker-desktop"
   cask "google-chrome"
