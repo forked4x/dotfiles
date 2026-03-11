@@ -25,7 +25,6 @@ if OS.mac?
   # Casks
   cask "chatgpt"
   cask "chromedriver"
-  cask "claude"
   cask "claude-code"
   cask "codex"
   cask "docker-desktop"
