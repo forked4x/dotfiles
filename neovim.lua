@@ -664,14 +664,7 @@ require("lazy").setup({
         },
         strategies = {
           chat = { adapter = "openrouter" },
-          inline = {
-            adapter = "openrouter",
-            keymaps = {
-              accept_change = { modes = { n = "<cr>" } },
-              reject_change = { modes = { n = "<esc>" }, opts = { nowait = true } },
-              stop = { modes = { n = "<esc>" }, index = 4, callback = "keymaps.stop" },
-            },
-          },
+          inline = { adapter = "openrouter" },
           cmd = { adapter = "openrouter" },
         },
       })
