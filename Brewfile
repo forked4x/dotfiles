@@ -17,10 +17,10 @@ if OS.mac?
   brew "uv"
 
   # Language Servers
+  brew "basedpyright"
   brew "gopls"
   brew "lua-language-server"
   brew "ruff"
-  brew "ty"
 
   # Casks
   cask "chatgpt"

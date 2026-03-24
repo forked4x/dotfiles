@@ -416,11 +416,11 @@ require("lazy").setup({
       })
 
       vim.lsp.enable({
+        "basedpyright",
         "gopls",
         "intelephense", -- npm install -g intelephense
         "lua_ls",
         "ruff",
-        "ty",
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {
