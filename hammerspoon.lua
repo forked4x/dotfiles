@@ -44,9 +44,10 @@ spoon.Lazy:setup({
           hs.osascript.applescript(script)
           hs.alert("Copied email link to clipboard")
         end,
-        c = "Calendar",
-        C = function() spoon.Caffeine:toggle() end,
-        d = "Things3",
+        c = "Claude",
+        C = "Calendar",
+        d = "Notion",
+        D = "Things3",
         e = "Microsoft Excel",
         f = "Finder",
         g = function() hs.urlevent.openURL("https://www.google.ca") end,
@@ -54,7 +55,6 @@ spoon.Lazy:setup({
         h = "Hammerspoon",
         k = function() hs.application.frontmostApplication():hide() end,
         m = "Music",
-        n = "Notion",
         o = function() hs.urlevent.openURL("https://openrouter.ai/chat") end,
         O = function()
           local app = hs.application.open("OTP Manager")
@@ -82,6 +82,7 @@ spoon.Lazy:setup({
         r = "Microsoft Remote Desktop",
         s = "TablePlus",
         t = "Microsoft Teams",
+        T = function() spoon.Caffeine:toggle() end,
         w = function()
           local front = hs.application.frontmostApplication()
           if front:name() == "kitty" then front:hide(); return end
@@ -104,7 +105,6 @@ spoon.Lazy:setup({
         end,
         x = "FileZilla",
         z = "Messages",
-        ["`"] = "ChatGPT",
       })
     end,
   },

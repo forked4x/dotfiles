@@ -23,10 +23,9 @@ if OS.mac?
   brew "ruff"
 
   # Casks
-  cask "chatgpt"
   cask "chromedriver"
+  cask "claude"
   cask "claude-code@latest"
-  cask "codex"
   cask "docker-desktop"
   cask "google-chrome"
   cask "hammerspoon"
