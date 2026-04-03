@@ -15,7 +15,7 @@ function s() {
     kitten ssh --kitten login_shell=zsh $@
     if [ $? -eq 127 ]; then kitten ssh --kitten $@; fi
 }
-alias cc="claude --dangerously-skip-permissions"
+alias cc="claude --allow-dangerously-skip-permissions --permission-mode plan"
 alias v="nvim"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n' | tee >(pbcopy)"
 

@@ -709,7 +709,7 @@ require("lazy").setup({
   { "fladson/vim-kitty", -- {{{ Can be removed in Neovim v0.12
     ft = "kitty",
   }, -- }}}
-  { "forked4x/hackernews.nvim", -- {{{
+  { dir = "~/Code/hackernews.nvim", -- {{{
     enabled = vim.fn.has("mac") == 1,
     cmd = "HackerNews",
   }, -- }}}
@@ -738,6 +738,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Select last changed or pasted region
 vim.keymap.set("n", "gp", [[ "`[" . getregtype() . "`]" ]], { expr = true, })
+
+vim.keymap.set("x", "v", "an", { remap = true })
+vim.keymap.set("x", "b", "in", { remap = true })
+vim.keymap.set("x", "[v", "[n", { remap = true })
+vim.keymap.set("x", "]v", "]n", { remap = true })
 
 -- Move to first character and end of lines with homerow
 vim.keymap.set({ "n", "o", "x" }, "H", "_")
