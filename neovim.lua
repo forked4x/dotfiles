@@ -739,11 +739,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Select last changed or pasted region
 vim.keymap.set("n", "gp", [[ "`[" . getregtype() . "`]" ]], { expr = true, })
 
-vim.keymap.set("x", "v", "an", { remap = true })
-vim.keymap.set("x", "b", "in", { remap = true })
-vim.keymap.set("x", "[v", "[n", { remap = true })
-vim.keymap.set("x", "]v", "]n", { remap = true })
-
 -- Move to first character and end of lines with homerow
 vim.keymap.set({ "n", "o", "x" }, "H", "_")
 vim.keymap.set({ "n", "o", "x" }, "L", "g_")
