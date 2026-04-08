@@ -1,4 +1,5 @@
 brew "cloc"
+brew "dua-cli"
 brew "fd"
 brew "fzf"
 brew "imagemagick"
