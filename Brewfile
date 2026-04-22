@@ -48,6 +48,7 @@ if OS.mac?
   mas "Dark Reader for Safari", id: 1438243180
   mas "Microsoft Excel", id: 462058435
   mas "Microsoft Outlook", id: 985367838
+  mas "Microsoft PowerPoint", id: 462062816
   mas "Microsoft Word", id: 462054704
   mas "OTP Manager", id: 928941247
   mas "Pixelmator Pro", id: 1289583905
