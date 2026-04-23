@@ -45,13 +45,17 @@ spoon.Lazy:setup({
           hs.alert("Copied email link to clipboard")
         end,
         c = "Claude",
-        C = "Calendar",
+        C = function()
+          hs.urlevent.openURL("https://chatgpt.com")
+          hs.timer.doAfter(1, function()
+            hs.eventtap.keyStroke({"shift"}, "tab")
+          end)
+        end,
         d = "Notion",
         D = "Things3",
         e = "Microsoft Excel",
         f = "Finder",
-        g = function() hs.urlevent.openURL("https://www.google.ca") end,
-        G = "Google Chrome",
+        g = "Google Chrome",
         h = "Hammerspoon",
         k = function() hs.application.frontmostApplication():hide() end,
         m = "Music",
@@ -105,6 +109,7 @@ spoon.Lazy:setup({
         end,
         x = "FileZilla",
         z = "Messages",
+        Z = "Calendar",
       })
     end,
   },
