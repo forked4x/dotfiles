@@ -16,6 +16,7 @@ function s() {
     if [ $? -eq 127 ]; then kitten ssh --kitten $@; fi
 }
 alias cc="claude --allow-dangerously-skip-permissions --permission-mode plan"
+alias codex="codex --dangerously-bypass-approvals-and-sandbox"
 alias v="nvim"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n' | tee >(pbcopy)"
 
