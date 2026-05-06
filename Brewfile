@@ -22,6 +22,7 @@ if OS.mac?
   brew "gopls"
   brew "lua-language-server"
   brew "ruff"
+  brew "typescript-language-server"
 
   # Casks
   cask "chromedriver"

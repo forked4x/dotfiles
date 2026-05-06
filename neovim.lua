@@ -401,7 +401,7 @@ require("lazy").setup({
     }
   }, -- }}}
   { "neovim/nvim-lspconfig", -- {{{
-    ft = { "go", "lua", "php", "python" },
+    ft = { "go", "javascript", "lua", "php", "python" },
     config = function()
       vim.lsp.config("lua_ls", {
         settings = {
@@ -419,6 +419,7 @@ require("lazy").setup({
         "intelephense", -- npm install -g intelephense
         "lua_ls",
         "ruff",
+        "ts_ls",
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {
