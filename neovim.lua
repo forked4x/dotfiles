@@ -127,7 +127,8 @@ require("lazy").setup({
           },
         },
         actions = {
-          open_neogit = function(_, item)
+          open_neogit = function(picker, item)
+            picker:close()
             vim.fn.chdir(item.cwd or item.file)
             vim.cmd("Neogit kind=replace cwd=" .. (item.cwd or item.file))
           end,
