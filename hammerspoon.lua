@@ -48,7 +48,7 @@ spoon.Lazy:setup({
         C = function()
           hs.urlevent.openURL("https://chatgpt.com")
           hs.timer.doAfter(1, function()
-            hs.eventtap.keyStroke({"shift"}, "tab")
+            hs.eventtap.keyStroke("", "tab")
           end)
         end,
         d = "Notion",
