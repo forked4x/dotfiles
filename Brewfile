@@ -23,6 +23,7 @@ if OS.mac?
   brew "lua-language-server"
   brew "ruff"
   brew "typescript-language-server"
+  brew "vscode-langservers-extracted"
 
   # Casks
   cask "chromedriver"
