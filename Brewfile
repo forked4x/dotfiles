@@ -31,6 +31,7 @@ if OS.mac?
   cask "claude-code@latest"
   cask "codex"
   cask "docker-desktop"
+  cask "font-0xproto"
   cask "google-chrome"
   cask "hammerspoon"
   cask "handbrake-app"
