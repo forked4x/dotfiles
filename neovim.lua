@@ -657,8 +657,12 @@ require("lazy").setup({
           http = {
             openrouter = function()
               return require("codecompanion.adapters").extend("openai_compatible", {
-                url = "https://openrouter.ai/api/v1/chat/completions",
-                env = { api_key = "cmd:cat ~/.dotfiles/openrouter_work.key" },
+                env = {
+                  url = "https://openrouter.ai/api/v1",
+                  chat_url = "/chat/completions",
+                  models_endpoint = "/models",
+                  api_key = "cmd:cat ~/.dotfiles/openrouter_work.key",
+                },
                 headers = { ["X-Title"] = "Neovim", ["HTTP-Referer"] = "https://neovim.io" },
                 schema = { model = { default = "anthropic/claude-sonnet-4.6" } },
               })
@@ -669,10 +673,20 @@ require("lazy").setup({
           chat = { adapter = "openrouter" },
           inline = { adapter = "openrouter" },
           cmd = { adapter = "openrouter" },
+          shared = {
+            keymaps = {
+              accept_change = { modes = { n = "<cr>" } },
+              reject_change = { modes = { n = "<esc>" } },
+            },
+          },
+        },
+        display = {
+          action_palette = { provider = "snacks" },
         },
       })
     end,
     keys = {
+      { "<leader>aa", mode = "n", ":CodeCompanionActions<cr>" },
       { "<leader>ai", mode = "n", ":CodeCompanion<cr>" },
       { "<leader>ai", mode = "x", ":<C-u>'<,'>CodeCompanion " },
       { "<leader>an", mode = "n", ":CodeCompanionChat<cr>" },
