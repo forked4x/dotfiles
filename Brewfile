@@ -8,14 +8,17 @@ brew "neovim"
 brew "python"
 brew "ripgrep"
 brew "tree-sitter-cli"
+brew "uv"
 brew "zoxide"
 
 if OS.mac?
   brew "ccusage"
   brew "fileicon"
   brew "go"
+
+  # npm
   brew "npm"
-  brew "uv"
+  npm  "intelephense"
 
   # Language Servers
   brew "basedpyright"

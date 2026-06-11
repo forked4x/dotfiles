@@ -20,6 +20,9 @@ alias codex="codex --dangerously-bypass-approvals-and-sandbox"
 alias v="nvim"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n' | tee >(pbcopy)"
 
+export HOMEBREW_NO_ASK=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 if [[ $(uname) == "Darwin" ]]; then
     if [[ ! -d /opt/homebrew ]]; then
         xcode-select --install

@@ -417,7 +417,7 @@ require("lazy").setup({
       vim.lsp.enable({
         "basedpyright",
         "gopls",
-        "intelephense", -- npm install -g intelephense
+        "intelephense",
         "jsonls",
         "lua_ls",
         "ruff",
