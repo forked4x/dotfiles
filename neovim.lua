@@ -749,7 +749,7 @@ vim.keymap.set({ "n", "x" }, "<D-c>", [["+y]])
 vim.keymap.set("o", "<D-c>", [[il]], { remap = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank({ higroup = "Substitute", timeout = 200, on_visual = true })
+    vim.hl.on_yank({ higroup = "Substitute", timeout = 200, on_visual = true })
   end,
 })
 
