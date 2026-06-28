@@ -438,6 +438,9 @@ require("lazy").setup({
       })
 
       vim.keymap.set("n", "ge", vim.diagnostic.open_float)
+      vim.keymap.set("n", "grv", function()
+        vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })
+      end)
       vim.keymap.set({ "n", "i" }, "<C-s>", function() vim.lsp.buf.signature_help() end)
       vim.keymap.set("n", "<leader>dd", vim.diagnostic.setqflist)
     end
