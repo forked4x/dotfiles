@@ -667,7 +667,7 @@ require("lazy").setup({
                   api_key = "cmd:cat ~/.dotfiles/openrouter_work.key",
                 },
                 headers = { ["X-Title"] = "Neovim", ["HTTP-Referer"] = "https://neovim.io" },
-                schema = { model = { default = "anthropic/claude-sonnet-4.6" } },
+                schema = { model = { default = "anthropic/claude-sonnet-5" } },
               })
             end
           }
