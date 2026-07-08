@@ -59,6 +59,7 @@ spoon.Lazy:setup({
         h = "Hammerspoon",
         k = function() hs.application.frontmostApplication():hide() end,
         m = "Music",
+        n = "Numi",
         o = function() hs.urlevent.openURL("https://openrouter.ai/chat") end,
         O = function()
           local app = hs.application.open("OTP Manager")
