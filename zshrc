@@ -15,6 +15,13 @@ function s() {
     kitten ssh --kitten login_shell=zsh $@
     if [ $? -eq 127 ]; then kitten ssh --kitten $@; fi
 }
+function tpclean() { # drop TablePlus query history dupes, keeping the day's first run
+    local h="$HOME/Library/Application Support/com.tinyapp.TablePlus/Cache/History"
+    find "$h" -name '*.sql' -type f -print0 | sort -z | xargs -0 md5 -r | awk '
+        { p = substr($0, 34); d = p; sub(/\/[^\/]*$/, "", d); k = $1 d
+          if (k in seen) { n++; printf "%s%c", p, 0 } else seen[k] = 1 }
+        END { printf "removing %d duplicate queries\n", n > "/dev/stderr" }' | xargs -0 rm
+}
 alias cc="claude --allow-dangerously-skip-permissions --permission-mode plan"
 alias codex="codex --dangerously-bypass-approvals-and-sandbox"
 alias v="nvim"
