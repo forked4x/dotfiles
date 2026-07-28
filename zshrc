@@ -16,7 +16,7 @@ function s() {
     if [ $? -eq 127 ]; then kitten ssh --kitten $@; fi
 }
 function tpclean() { # drop TablePlus query history dupes, keeping the day's first run
-    local h="$HOME/Library/Application Support/com.tinyapp.TablePlus/Cache/History"
+    local h="$HOME/Library/Application Support/com.tinyapp.TablePlus/Data/History"
     find "$h" -name '*.sql' -type f -print0 | sort -z | xargs -0 md5 -r | awk '
         { p = substr($0, 34); d = p; sub(/\/[^\/]*$/, "", d); k = $1 d
           if (k in seen) { n++; printf "%s%c", p, 0 } else seen[k] = 1 }
