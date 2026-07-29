@@ -118,6 +118,15 @@ spoon.Lazy:setup({
   -- Prevents display sleep and keeps Microsoft Teams status as "Available"
   { "forked4x/Caffeine.spoon", start = false },
 
+  -- A clipboard history manager for Hammerspoon
+  { "Necrom4/ClipboardHistory.spoon",
+    config = function()
+      spoon.ClipboardHistory:bindHotkeys({
+        show = { { "cmd", "shift" }, "v" },
+      })
+    end,
+  },
+
   -- Generates EmmyLua annotations for Hammerspoon
   { "Hammerspoon/Spoons/raw/master/Spoons/EmmyLua.spoon.zip" },
 
