@@ -64,9 +64,8 @@ if [[ $(uname) == "Darwin" ]]; then
         echo "copy --dest .config/nvim/init.lua .dotfiles/neovim.lua" >> ~/.config/kitty/ssh.conf
         echo "copy --dest .gitignore .dotfiles/.gitignore" >> ~/.config/kitty/ssh.conf
         echo "copy --dest .zshrc .dotfiles/zshrc" >> ~/.config/kitty/ssh.conf
-        curl -Lo ~/.config/kitty/kitty-dark.icns https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-dark.icns
-        fileicon set /Applications/kitty.app ~/.config/kitty/kitty-dark.icns
-        killall Dock
+        curl -Lo ~/.config/kitty/kitty.app.icns https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-dark.icns
+        rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock
     fi
     if [[ ! -d ~/.config/nvim ]]; then
         mkdir -p ~/.config/nvim

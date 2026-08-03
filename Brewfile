@@ -13,7 +13,6 @@ brew "zoxide"
 
 if OS.mac?
   brew "ccusage"
-  brew "fileicon"
   brew "go"
 
   # npm
