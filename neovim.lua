@@ -653,29 +653,28 @@ require("lazy").setup({
   }, -- }}}
   { "olimorris/codecompanion.nvim", -- {{{
     enabled = vim.fn.has("mac") == 1,
-    build = ":TSInstall yaml",
+    build = ":TSInstall markdown markdown_inline yaml",
     config = function()
       require("codecompanion").setup({
         adapters = {
           http = {
-            openrouter = function()
-              return require("codecompanion.adapters").extend("openai_compatible", {
+            openai = function()
+              return require("codecompanion.adapters").extend("openai", {
                 env = {
-                  url = "https://openrouter.ai/api/v1",
-                  chat_url = "/chat/completions",
-                  models_endpoint = "/models",
-                  api_key = "cmd:cat ~/.dotfiles/openrouter_work.key",
+                  api_key = "cmd:cat ~/.dotfiles/openai.key",
                 },
-                headers = { ["X-Title"] = "Neovim", ["HTTP-Referer"] = "https://neovim.io" },
-                schema = { model = { default = "anthropic/claude-sonnet-5" } },
+                schema = {
+                  model = { default = "gpt-5.6-sol" },
+                  reasoning_effort = { default = "low" },
+                },
               })
             end
           }
         },
         strategies = {
-          chat = { adapter = "openrouter" },
-          inline = { adapter = "openrouter" },
-          cmd = { adapter = "openrouter" },
+          chat = { adapter = "openai" },
+          inline = { adapter = "openai" },
+          cmd = { adapter = "openai" },
           shared = {
             keymaps = {
               accept_change = { modes = { n = "<cr>" } },
