@@ -28,6 +28,7 @@ if OS.mac?
   brew "vscode-langservers-extracted"
 
   # Casks
+  cask "calibre"
   cask "chromedriver"
   cask "claude"
   cask "claude-code@latest"
