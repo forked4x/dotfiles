@@ -421,7 +421,7 @@ require("lazy").setup({
         "jsonls",
         "lua_ls",
         "ruff",
-        "ts_ls",
+        "tsc",
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {

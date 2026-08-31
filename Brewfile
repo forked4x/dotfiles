@@ -24,7 +24,7 @@ if OS.mac?
   brew "gopls"
   brew "lua-language-server"
   brew "ruff"
-  brew "typescript-language-server"
+  brew "typescript"
   brew "vscode-langservers-extracted"
 
   # Casks
