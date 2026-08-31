@@ -713,7 +713,8 @@ require("lazy").setup({
     enabled = vim.fn.has("mac") == 1,
     build = "mkdir -p ~/.config/kitty && ./kitty/install-kittens.bash",
     config = function()
-      require("smart-splits").setup()
+      ---@diagnostic disable-next-line: missing-fields
+      require("smart-splits").setup({})
       local modes = { "n", "i", "x", "c" }
       vim.keymap.set(modes, "<C-h>", require("smart-splits").move_cursor_left)
       vim.keymap.set(modes, "<C-j>", require("smart-splits").move_cursor_down)
