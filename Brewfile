@@ -44,9 +44,11 @@ if OS.mac?
   cask "numi"
   cask "openvpn-connect"
   cask "plex-media-server"
+  cask "private-internet-access"
   cask "stats"
   cask "tableplus"
   cask "transmission"
+  cask "vlc"
 
   # App Store
   brew "mas"
