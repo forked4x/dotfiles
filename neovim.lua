@@ -130,7 +130,7 @@ require("lazy").setup({
           open_neogit = function(picker, item)
             picker:close()
             vim.fn.chdir(item.cwd or item.file)
-            vim.cmd("Neogit kind=replace cwd=" .. (item.cwd or item.file))
+            vim.cmd("Neogit cwd=" .. (item.cwd or item.file))
           end,
           live_grep = function(_, item)
             Snacks.picker.grep({ cwd = item.dir and item.file or item.cwd })
@@ -545,7 +545,7 @@ require("lazy").setup({
     end,
     cmd = "Neogit",
     keys = {{ "<D-g>", mode = { "n", "i", "x" },
-      [[<cmd>silent! wall<cr><cmd>Neogit kind=replace<cr>]]
+      [[<cmd>silent! wall<cr><cmd>Neogit<cr>]]
     }},
   }, -- }}}
   { "tpope/vim-fugitive", -- {{{
