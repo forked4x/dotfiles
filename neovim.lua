@@ -718,7 +718,6 @@ require("lazy").setup({
     event = { "User KittyScrollbackLaunch" },
   }, -- }}}
   { "mrjones2014/smart-splits.nvim", -- {{{
-    enabled = vim.fn.has("mac") == 1,
     build = "mkdir -p ~/.config/kitty && ./kitty/install-kittens.bash",
     config = function()
       ---@diagnostic disable-next-line: missing-fields
