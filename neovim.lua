@@ -704,13 +704,6 @@ require("lazy").setup({
       { "<leader>ap", mode = "x", ":CodeCompanionChat Add<cr>" },
     },
   }, -- }}}
-  { "mistweaverco/kulala.nvim", -- {{{
-    ft = "http",
-    opts = {
-      global_keymaps = true,
-      additional_curl_options = { "-L" },
-    },
-  }, -- }}}
   { "mikesmithgh/kitty-scrollback.nvim", -- {{{
     enabled = vim.fn.has("mac") == 1,
     config = true,
