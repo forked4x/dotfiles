@@ -649,15 +649,7 @@ require("lazy").setup({
         end,
       })
     end,
-    keys = {{ "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>" }},
-  }, -- }}}
-  { "kevalin/mermaid.nvim", -- {{{
-    opts = {},
-    keys = {
-      { "<leader>mf", mode = "n", ":MermaidFormat<cr>" },
-      { "<leader>mm", mode = "n", ":MermaidPreview<cr>" },
-      { "<leader>ms", mode = "n", ":MermaidPreviewStop<cr>" },
-    },
+    keys = {{ "<leader>m", "<cmd>MarkdownPreviewToggle<cr>" }},
   }, -- }}}
   { "olimorris/codecompanion.nvim", -- {{{
     enabled = vim.fn.has("mac") == 1,
