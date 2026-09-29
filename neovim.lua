@@ -664,7 +664,7 @@ require("lazy").setup({
                   api_key = "cmd:cat ~/.dotfiles/openai.key",
                 },
                 schema = {
-                  model = { default = "gpt-6-sol" },
+                  model = { default = "gpt-6.1-sol" },
                   reasoning_effort = { default = "medium" },
                 },
               })
