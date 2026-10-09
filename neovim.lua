@@ -702,11 +702,11 @@ require("lazy").setup({
     cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
     event = { "User KittyScrollbackLaunch" },
   }, -- }}}
-  { "mrjones2014/smart-splits.nvim", -- {{{
-    build = "mkdir -p ~/.config/kitty && ./kitty/install-kittens.bash",
+  { "smart-splits-nvim/smart-splits.nvim", -- {{{
+    dependencies = "smart-splits-nvim/backend-kitty",
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require("smart-splits").setup({})
+      require("smart-splits").setup({ mux = { backend = "smart-splits-backend-kitty" } })
       local modes = { "n", "i", "x", "c" }
       vim.keymap.set(modes, "<C-h>", require("smart-splits").move_cursor_left)
       vim.keymap.set(modes, "<C-j>", require("smart-splits").move_cursor_down)
