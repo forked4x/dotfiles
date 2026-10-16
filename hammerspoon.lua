@@ -45,12 +45,6 @@ spoon.Lazy:setup({
           hs.alert("Copied email link to clipboard")
         end,
         c = "Claude",
-        C = function()
-          hs.urlevent.openURL("https://chatgpt.com")
-          hs.timer.doAfter(1, function()
-            hs.eventtap.keyStroke("", "tab")
-          end)
-        end,
         d = "Notion",
         D = "Things3",
         e = "Microsoft Excel",
