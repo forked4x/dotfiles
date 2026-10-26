@@ -76,7 +76,10 @@ spoon.Lazy:setup({
             0.1)
         end,
         p = "Photos",
-        P = "OpenVPN Connect",
+        P = function()
+          -- Need to use bundleID otherwise it finds the "OpenVPN Connect" login item helper
+          hs.application.launchOrFocusByBundleID("org.openvpn.client.app")
+        end,
         q = "Safari",
         r = "Microsoft Remote Desktop",
         s = "TablePlus",
