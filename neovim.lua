@@ -601,7 +601,7 @@ require("lazy").setup({
     ft = "qf",
     opts = {
       keys = {
-        { "<Tab>", "<cr><C-w>w" },
+        { "<Tab>", "<cr><C-w>p" },
         { ">", function() require("quicker").expand({ before = 2, after = 2, add_to_existing = true }) end },
         { "<", function() require("quicker").collapse() end },
       },
