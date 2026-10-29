@@ -45,6 +45,15 @@ spoon.Lazy:setup({
           hs.alert("Copied email link to clipboard")
         end,
         c = "Claude",
+        C = function()
+          local app = hs.application.open("Claude")
+          hs.timer.waitUntil(
+            function()
+              return hs.application.frontmostApplication():name() == "Claude"
+            end,
+            function() app:selectMenuItem({ "File", "New Chat" }) end,
+            0.1)
+        end,
         d = "Notion",
         D = "Things3",
         e = "Microsoft Excel",
