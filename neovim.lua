@@ -91,9 +91,10 @@ require("lazy").setup({
         },
         lualine_y = { "filetype" },
         lualine_z = {
-          { "location",
-            fmt = function() return "%l/%L:%v/%{virtcol('$') - 1}" end,
-          },
+          { "%l", padding = { left = 1, right = 0 } },
+          { "/%L:", type = "stl", color = { gui = "none" }, padding = 0 },
+          { "%v", padding = 0 },
+          { "/%{virtcol('$') - 1}", type = "stl", color = { gui = "none" }, padding = { left = 0, right = 1 } },
         },
       },
     },
